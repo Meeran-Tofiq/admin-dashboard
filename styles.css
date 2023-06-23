@@ -3,6 +3,12 @@ body {
     grid-template: 1fr 4fr / 1fr 4fr;
     height: 100vh;
     overflow: hidden;
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
 }
 
 .sidebar {
@@ -12,6 +18,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    padding: 2.5rem;
+
+    background-color: #2a9fe3;
+    color: aliceblue;
+    font-size: 32px;
 }
 
 header {
