@@ -19,6 +19,25 @@ header {
     grid-row: 1;
     display: grid;
     grid-template: 1fr 1fr / 1fr;
+    
+    padding: 10px 40px;
+    gap: 20px;
+}
+
+header .top {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+form {
+    display: flex;
+    width: 100%;
+}
+
+form input {
+    flex: 1;
 }
 
 .content {
