@@ -1,14 +1,23 @@
+:root {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
     display: grid;
     grid-template: 1fr 4fr / 1fr 4fr;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0px;
 }
 
 ul {
     list-style-type: none;
     padding: 0px;
+}
+
+h3 {
+    margin: 0px;
+
 }
 
 .sidebar {
@@ -55,16 +64,77 @@ form input {
 .content {
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr; 
+    gap: 1rem;
+
+    background-color: #d5d9dc;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    max-height: 80vh;
 }
 
 .content .projects {
     grid-column: 1;
     grid-row: 1 / span 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 1.5rem;
 }
 
-.content .announcements {
+.projects .heading {
+    grid-column: 1 / span 2;
+    margin-bottom: -10px;
+}
+
+.projects .card {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, #fdcd3b 3%, #fbfbfa 3%);
+}
+
+.announcements {
     grid-column: 2;
     grid-row: 1;
+}
+
+.announcements,
+.trending {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1.5rem;
+}
+
+.announcements .heading,
+.trending .heading {
+    margin-bottom: -10px;
+}
+
+.announcements .container,
+.trending .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    background-color: #fbfbfa;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.announcements .container .announcement {
+    border-bottom: 0.5px solid #cdcfd2;
+}
+
+.announcements .container .announcement,
+.trending .container .profile {
+    margin-bottom: 2rem;
+}
+
+.announcements .container p {
+    margin-top: 0.2rem;
+    font-size: small;
+    color: #636465;
 }
 
 .content .trending {
