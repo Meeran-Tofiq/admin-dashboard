@@ -29,6 +29,10 @@ li {
     align-items: center;
 }
 
+li:hover {
+    cursor: pointer;
+}
+
 ul i {
     grid-column: 1;
 }
@@ -101,6 +105,10 @@ header .profile-img {
     margin-right: 1rem;
 }
 
+header .fa-solid {
+    color: black;
+}
+
 .profile-img img {
     border-radius: 50%;
     border: 1px solid #fdcd3b;
@@ -113,11 +121,11 @@ header .profile-img {
 }
 
 .bottom img {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
 }
 
-header .profile-message {
+.profile-message {
     font-size: 14px;
     color: #636465;
 }
@@ -285,4 +293,15 @@ form button.search:hover {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 1rem;
+
+    padding-top: 0.5rem;
+}
+
+.trending .profile-img {
+    grid-row: 1 / span 2;
+}
+
+.trending .profile-name,
+.trending .profile-message {
+    grid-column: 2;
 }
