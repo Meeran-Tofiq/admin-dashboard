@@ -15,6 +15,10 @@ ul {
     padding: 0px;
 }
 
+li {
+    margin: 1rem 0rem;
+}
+
 h3 {
     margin: 0px;
 
@@ -41,8 +45,8 @@ header {
     display: grid;
     grid-template: 1fr 1fr / 1fr;
     
+    box-shadow: inset 0rem -0.3rem 0.2rem #cdcdcd;
     padding: 10px 40px;
-    gap: 20px;
 }
 
 header .top {
@@ -50,6 +54,91 @@ header .top {
     grid-template: 1fr / 1fr 1fr;
     align-items: center;
     justify-items: center;
+}
+
+header .user {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+header .profile {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+header .profile-img {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+
+    justify-self: center;
+    margin-right: 1rem;
+}
+
+header .profile-img img {
+    border-radius: 50%;
+    border: 1px solid #fdcd3b;
+}
+
+.user img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.bottom img {
+    width: 6rem;
+    height: 6rem;
+}
+
+header .profile-message {
+    font-size: 14px;
+    color: #636465;
+}
+
+header .profile-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bottom .tools {
+    justify-self: end;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.tools button {
+    background-color: #2a9fe3;
+    color: white;
+    border-radius: 2rem;
+    border: none;
+
+    width: 7rem;
+    height: 3rem;
+
+    font-size: 18px;
+}
+
+.tools button:hover {
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem #cdcfd2;
+}
+
+.tools button:active {
+    background-color: #238bc7;
+    box-shadow:  0.15rem 0.15rem #cdcfd2;
 }
 
 form {
@@ -64,12 +153,12 @@ form input {
 .content {
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr; 
-    gap: 1rem;
+    gap: 1.5rem;
 
     background-color: #d5d9dc;
     padding: 2rem;
     padding-bottom: 4rem;
-    max-height: 80vh;
+    max-height: 100%;
 }
 
 .content .projects {
@@ -96,6 +185,8 @@ form input {
 .announcements {
     grid-column: 2;
     grid-row: 1;
+
+    margin-bottom: 2rem;
 }
 
 .announcements,
@@ -119,22 +210,29 @@ form input {
 
     background-color: #fbfbfa;
     border-radius: 0.5rem;
-    padding: 2rem;
+    padding: 1rem 2rem; 
 }
 
 .announcements .container .announcement {
     border-bottom: 0.5px solid #cdcfd2;
+    margin: 0.5rem 0px;
 }
 
-.announcements .container .announcement,
-.trending .container .profile {
-    margin-bottom: 2rem;
+.announcements .container .announcement:nth-child(3) {
+    border: none;
+    margin-bottom: 0px;
 }
 
 .announcements .container p {
     margin-top: 0.2rem;
     font-size: small;
     color: #636465;
+}
+
+.projects .card,
+.announcements .container,
+.trending .container {
+    box-shadow: 0.3rem 0.3rem #c2c4c7;
 }
 
 .content .trending {
