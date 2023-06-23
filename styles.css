@@ -37,13 +37,20 @@ ul i {
     grid-column: 1;
 }
 
+.notifications i {
+    color: black;
+    font-size: 24px;
+    margin-right: 2rem;
+}
+
 h3 {
     margin: 0px;
 
 }
 
 .profile-img:hover,
-.profile-name:hover {
+.profile-name:hover,
+i:hover {
     cursor: pointer;
 }
 
@@ -103,10 +110,6 @@ header .profile-img {
 
     justify-self: center;
     margin-right: 1rem;
-}
-
-header .fa-solid {
-    color: black;
 }
 
 .profile-img img {
