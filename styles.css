@@ -45,7 +45,6 @@ header {
     display: grid;
     grid-template: 1fr 1fr / 1fr;
     
-    box-shadow: inset 0rem -0.3rem 0.2rem #cdcdcd;
     padding: 10px 40px;
 }
 
@@ -146,8 +145,26 @@ form {
     width: 100%;
 }
 
-form input {
+form input[type="search"] {
     flex: 1;
+
+    appearance: none;
+    background-color: #c2c4c7;
+    border-radius: 2rem;
+    border: none;
+
+    padding: 0px 1rem;
+    height: 2rem;
+}
+
+form button.search {
+    background: none;
+    border: none;
+    margin-right: 1rem;
+}
+
+form button.search:hover {
+    cursor: pointer;
 }
 
 .content {
@@ -159,6 +176,8 @@ form input {
     padding: 2rem;
     padding-bottom: 4rem;
     max-height: 100%;
+
+    box-shadow: inset 0rem 0.3rem 0.2rem #cdcdcd;
 }
 
 .content .projects {
